@@ -24,6 +24,16 @@
   font-size: 12px;
 }
 
+.crypto__logo {
+  height: 35px;
+  width: 35px;
+}
+
+.arrow__image {
+  height: 50px;
+  width: 50px;
+}
+
 @media (min-width: 768px) {
   .hero__title {
     width: 600px;
