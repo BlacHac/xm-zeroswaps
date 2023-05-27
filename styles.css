@@ -2,6 +2,53 @@
   font-family: roboto;
 }
 
-.nav {
-  background-color: black;
+.signup__button {
+  font-size: 24px !important;
+  width: 290px;
+  letter-spacing: 1px;
+  font-family: Bebas Neue !important;
+  background-color: #29a643 !important;
+}
+
+.hero__title {
+  width: 260px;
+}
+
+.hero__description {
+  width: 245px;
+  font-size: 14px;
+}
+
+.hero__tnc {
+  width: 244px;
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .hero__title {
+    width: 600px;
+  }
+  .hero__description {
+    width: 400px;
+  }
+  .hero__tnc {
+    width: 330px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero__title {
+    width: 730px;
+    font-size: 35px;
+  }
+  .hero__description {
+    width: 463px;
+    font-size: 16px;
+  }
+  .hero__tnc {
+    width: 330px;
+  }
+  .signup__button {
+    width: 345px;
+  }
 }
