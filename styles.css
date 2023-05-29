@@ -1,5 +1,8 @@
 * {
   font-family: roboto;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .signup__button {
@@ -24,14 +27,75 @@
   font-size: 12px;
 }
 
-.crypto__logo {
+.cryptocard {
+  width: 236px;
+  height: 144px;
+  padding: 5px 15px 10px 15px;
+  background: rgba(140, 140, 140, 0.1);
+  mix-blend-mode: normal;
+  border: 0.871376px solid rgba(167, 167, 167, 0.2);
+  border-radius: 13.0706px;
+  margin: 0 10px;
+}
+
+.cryptocard__logo {
   height: 35px;
   width: 35px;
 }
 
-.arrow__image {
-  height: 50px;
-  width: 50px;
+.cryptocard_title {
+  font-weight: 500;
+  font-size: 12px;
+  color: #ffffff;
+  text-shadow: 0px 0px 60.125px #ffc255;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.cryptocard__divider {
+  height: 1px;
+  width: 100%;
+  background: #ffffff;
+  opacity: 0.15;
+}
+
+.cryptocard__price {
+  font-weight: 700;
+  font-size: 17.4275px;
+  color: #ffffff;
+  text-shadow: 0px 0px 60.125px #ffc255;
+  margin-bottom: 0;
+}
+
+.cryptocard__badge {
+  width: 49px;
+  height: 15px;
+  background: #fff8d6;
+  border-radius: 3.48551px;
+  text-align: center;
+}
+
+.cryptocard__badge__text {
+  font-weight: 700;
+  font-size: 8px;
+  color: #000000;
+  text-shadow: 0px 0px 60.125px #ffc255;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.cryptocard__uparrow {
+  height: 10px;
+  font-size: 8px;
+  color: #b1ffc2;
+  text-shadow: 0px 0px 60.125px #ffc255;
+}
+
+.cryptocard__percentage {
+  height: 16px;
+  font-size: 12px;
+  color: #b1ffc2;
+  text-shadow: 0px 0px 60.125px #ffc255;
 }
 
 @media (min-width: 768px) {
@@ -43,6 +107,10 @@
   }
   .hero__tnc {
     width: 330px;
+  }
+  .cryptocard {
+    width: 210px;
+    height: 128px;
   }
 }
 
@@ -60,5 +128,9 @@
   }
   .signup__button {
     width: 345px;
+  }
+  .cryptocard {
+    width: 205px;
+    height: 150px;
   }
 }
