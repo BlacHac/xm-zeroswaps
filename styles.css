@@ -1,5 +1,5 @@
 * {
-  font-family: roboto;
+  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -75,7 +75,7 @@
   text-align: center;
 }
 
-.cryptocard__badge__text {
+.cryptocard__badgetext {
   font-weight: 700;
   font-size: 8px;
   color: #000000;
@@ -96,6 +96,93 @@
   font-size: 12px;
   color: #b1ffc2;
   text-shadow: 0px 0px 60.125px #ffc255;
+}
+
+.service__titlecontainer {
+  width: 166px;
+  height: 75px;
+  text-align: center;
+}
+
+.service__titletext {
+  font-weight: 300;
+  font-size: 32px;
+  color: #ffffff;
+}
+
+.service__titletext--bold {
+  font-weight: 700;
+}
+
+.service__titledivider {
+  width: 70px;
+  height: 0px;
+  border: 2px solid #29a643;
+}
+
+.service__description {
+  width: 280px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.service_carditem {
+  width: 280px;
+  height: 235px;
+  background: #0b0819;
+  backdrop-filter: blur(45px);
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.service_cardtitle {
+  width: 137px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 0;
+}
+
+.service_carddivider {
+  width: 50px;
+  height: 0px;
+  border: 2px solid #29a643;
+}
+
+.service_carddescription {
+  width: 190px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.service_cardimage--position {
+  position: absolute;
+  width: 26.83px;
+  height: 56.91px;
+  right: 10%;
+  top: 10%;
+}
+
+.service_cardimage--fast {
+  width: 26.83px;
+  height: 56.91px;
+}
+
+.service_cardimage--pricing {
+  width: 59.89px;
+  height: 58.57px;
+}
+
+.service_cardimage--tech {
+  width: 56.82px;
+  height: 58.14px;
+}
+
+.service_cardimage--doller {
+  width: 38.21px;
+  height: 58.97px;
 }
 
 @media (min-width: 768px) {

@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
     <title>XM.com</title>
@@ -77,9 +77,9 @@
       </div>
     </header>
     <main>
-      <!-- crpto cards section-->
+      <!-- crypto cards section-->
       <div
-        class="container-fluid bg-dark d-flex justify-content-center flex-wrap row-gap-4"
+        class="container-fluid bg-dark d-flex justify-content-center flex-wrap row-gap-4 py-3"
       >
         <div class="cryptocard d-flex flex-column justify-content-evenly">
           <div class="d-flex align-items-center gap-3">
@@ -87,7 +87,7 @@
             <img class="cryptocard__logo" src="assets/btc.png" alt="btc_icon" />
             <h6 class="cryptocard_title">BTC</h6>
             <div class="cryptocard__badge">
-              <p class="cryptocard__badge__text mx-auto">Bitcoin</p>
+              <p class="cryptocard__badgetext mx-auto">Bitcoin</p>
             </div>
           </div>
           <div class="cryptocard__divider"></div>
@@ -105,7 +105,7 @@
             <img class="cryptocard__logo" src="assets/eth.png" alt="btc_icon" />
             <h6 class="cryptocard_title">ETH</h6>
             <div class="cryptocard__badge">
-              <p class="cryptocard__badge__text mx-auto">Bitcoin</p>
+              <p class="cryptocard__badgetext mx-auto">Bitcoin</p>
             </div>
           </div>
           <div class="cryptocard__divider"></div>
@@ -123,7 +123,7 @@
             <img class="cryptocard__logo" src="assets/xrp.png" alt="btc_icon" />
             <h6 class="cryptocard_title">xrp</h6>
             <div class="cryptocard__badge">
-              <p class="cryptocard__badge__text mx-auto">Bitcoin</p>
+              <p class="cryptocard__badgetext mx-auto">Bitcoin</p>
             </div>
           </div>
           <div class="cryptocard__divider"></div>
@@ -141,7 +141,7 @@
             <img class="cryptocard__logo" src="assets/bch.png" alt="bch_icon" />
             <h6 class="cryptocard_title">bch</h6>
             <div class="cryptocard__badge">
-              <p class="cryptocard__badge__text mx-auto">Bitcoin</p>
+              <p class="cryptocard__badgetext mx-auto">Bitcoin</p>
             </div>
           </div>
           <div class="cryptocard__divider"></div>
@@ -159,7 +159,7 @@
             <img class="cryptocard__logo" src="assets/ltc.png" alt="ltc_icon" />
             <h6 class="cryptocard_title">BTC</h6>
             <div class="cryptocard__badge">
-              <p class="cryptocard__badge__text mx-auto">Bitcoin</p>
+              <p class="cryptocard__badgetext mx-auto">Bitcoin</p>
             </div>
           </div>
           <div class="cryptocard__divider"></div>
@@ -170,6 +170,83 @@
             ></i>
             <small class="cryptocard__percentage">8.23%</small>
           </span>
+        </div>
+      </div>
+      <!-- Why Trade with XM? section -->
+      <div class="service container-fluid bg-dark py-3">
+        <div class="d-flex flex-column align-items-center gap-4 mb-5">
+          <div class="service__titlecontainer">
+            <h2 class="service__titletext">
+              Why <span class="service__titletext--bold">Trade</span> with XM?
+            </h2>
+          </div>
+          <div class="service__titledivider"></div>
+          <div class="service__description">
+            <p>
+              We have been providing traders around the world with the same
+              premium experience for over a decade. As an industry-leader, we
+              know what the modern trader needs to be successful in the markets.
+            </p>
+          </div>
+        </div>
+        <div class="service__cardcontainer d-flex flex-wrap row-gap-4">
+          <div class="service_carditem mx-auto">
+            <div class="d-flex flex-column py-5 px-4 gap-3">
+              <h3 class="service_cardtitle">Superior Trade Execution</h3>
+              <div class="service_carddivider"></div>
+              <p class="service_carddescription">
+                <strong>99%</strong> of trades are executed in
+                <strong>less than a second</strong>, with no requotes or
+                rejections.
+              </p>
+            </div>
+            <img
+              class="service_cardimage--position service_cardimage--fast"
+              src="assets/fast-execusion-icon.png"
+            />
+          </div>
+          <div class="service_carditem mx-auto">
+            <div class="d-flex flex-column py-5 px-4 gap-3">
+              <h3 class="service_cardtitle">Competitive Pricing</h3>
+              <div class="service_carddivider"></div>
+              <p class="service_carddescription">
+                We offer some of the <strong>lowest spreads</strong> and we
+                don’t charge commissions.
+              </p>
+            </div>
+            <img
+              class="service_cardimage--position service_cardimage--pricing"
+              src="assets/competitive-pricing-icon.png"
+            />
+          </div>
+          <div class="service_carditem mx-auto">
+            <div class="d-flex flex-column py-5 px-4 gap-3">
+              <h3 class="service_cardtitle">Advanced Technology</h3>
+              <div class="service_carddivider"></div>
+              <p class="service_carddescription">
+                Trade on <strong>MT4</strong> or <strong>MT5</strong>, with
+                expert tools, across desktop, web and mobile.
+              </p>
+            </div>
+            <img
+              class="service_cardimage--position service_cardimage--tech"
+              src="assets/tech-icon.png"
+            />
+          </div>
+          <div class="service_carditem mx-auto">
+            <div class="d-flex flex-column py-5 px-4 gap-3">
+              <h3 class="service_cardtitle">Start with $5</h3>
+              <div class="service_carddivider"></div>
+              <p class="service_carddescription">
+                Start trading your preferred instruments with as little as a
+                <strong>$5 minimum deposit.</strong>
+              </p>
+            </div>
+            <img
+              class="service_cardimage--position service_cardimage--doller"
+              src="assets/dollar-icon.png"
+            />
+          </div>
         </div>
       </div>
     </main>
