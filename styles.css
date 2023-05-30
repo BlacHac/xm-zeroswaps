@@ -100,7 +100,6 @@
 
 .service__titlecontainer {
   width: 166px;
-  height: 75px;
   text-align: center;
 }
 
@@ -108,6 +107,7 @@
   font-weight: 300;
   font-size: 32px;
   color: #ffffff;
+  margin-bottom: 0;
 }
 
 .service__titletext--bold {
@@ -128,7 +128,9 @@
   text-align: center;
 }
 
-.service_carditem {
+.service_carditem--first,
+.service_carditem--second,
+.service_carditem--rest {
   width: 280px;
   height: 235px;
   background: #0b0819;
@@ -151,17 +153,18 @@
   border: 2px solid #29a643;
 }
 
-.service_carddescription {
+.service_carddescription,
+.service_carddescription--special {
   width: 190px;
   font-size: 14px;
   line-height: 20px;
+  margin-bottom: 0;
 }
 
-.service_cardimage--position {
+.service_cardimage--position,
+.service_cardimage--positionfast {
   position: absolute;
-  width: 26.83px;
-  height: 56.91px;
-  right: 10%;
+  right: 5%;
   top: 10%;
 }
 
@@ -199,6 +202,47 @@
     width: 210px;
     height: 128px;
   }
+  .service_carditem--first,
+  .service_carditem--second,
+  .service_carditem--rest {
+    width: 530px;
+    height: 230px;
+  }
+  .service_cardtitle {
+    width: 175px;
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .service__description {
+    width: 642px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .service__titlecontainer {
+    width: 100%;
+  }
+  .service_cardimage--fast {
+    width: 41.46px;
+    height: 87.95px;
+  }
+
+  .service_cardimage--pricing {
+    width: 92.56px;
+    height: 90.52px;
+  }
+
+  .service_cardimage--tech {
+    width: 87.81px;
+    height: 89.86px;
+  }
+
+  .service_cardimage--doller {
+    width: 59.05px;
+    height: 91.14px;
+  }
+  .service_carddescription {
+    width: 305px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -219,5 +263,56 @@
   .cryptocard {
     width: 205px;
     height: 150px;
+  }
+  .service_carditem--first {
+    width: 320px;
+    height: 570px;
+  }
+  .service_carditem--second {
+    width: 676px;
+    height: 265px;
+  }
+  .service_carditem--rest {
+    width: 328px;
+    height: 285px;
+  }
+  .service_carddescription,
+  .service_carddescription--special {
+    font-size: 16px;
+    width: 225px;
+    line-height: 22px;
+  }
+  .service_carddescription--special {
+    width: 405px;
+  }
+  .service__description {
+    width: 635px;
+  }
+  .service__titletext {
+    font-size: 35px;
+  }
+  .service_cardimage--fast {
+    width: 100px;
+    height: 212.12px;
+  }
+
+  .service_cardimage--pricing {
+    width: 98px;
+    height: 95.85px;
+  }
+
+  .service_cardimage--tech {
+    width: 72.32px;
+    height: 74px;
+  }
+
+  .service_cardimage--doller {
+    width: 48.63px;
+    height: 75.06px;
+  }
+  .service_cardimage--positionfast {
+    position: absolute;
+    left: 12%;
+    top: 58%;
   }
 }
