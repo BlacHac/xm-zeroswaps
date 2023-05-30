@@ -1,17 +1,36 @@
+:root {
+  --font-family: "Roboto", sans-serif;
+  --font-family-special: "Bebas Neue", sans-serif;
+
+  --color-white: #ffffff;
+  --color-green: #29a643;
+  --color-gray-light: #f7f7f7;
+  --color-gray: #cccccc;
+  --color-black: #000000;
+  --color-red: #d51820;
+  --color-orange: #ffc255;
+  --color-green-light: #b1ffc2;
+  --color-yellow: #fff8d6;
+  --color-blue: #0b0819;
+  --color-blue-light: rgba(140, 140, 140, 0.1);
+  --color-border: rgba(167, 167, 167, 0.2);
+  --color-bfh-fonts: #444444;
+}
+
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-family);
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .signup__button {
   font-size: 24px !important;
   width: 290px;
   letter-spacing: 1px;
-  font-family: "Bebas Neue", sans-serif !important;
-  background-color: #29a643 !important;
+  font-family: var(--font-family-special) !important;
+  background-color: var(--color-green) !important;
 }
 
 .hero__title {
@@ -33,9 +52,9 @@
   width: 236px;
   height: 144px;
   padding: 5px 15px 10px 15px;
-  background: rgba(140, 140, 140, 0.1);
+  background: var(--color-blue-light);
   mix-blend-mode: normal;
-  border: 0.871376px solid rgba(167, 167, 167, 0.2);
+  border: 0.871376px solid var(--color-border);
   border-radius: 13.0706px;
   margin: 0 10px;
 }
@@ -48,7 +67,7 @@
 .cryptocard_title {
   font-weight: 500;
   font-size: 12px;
-  text-shadow: 0px 0px 60.125px #ffc255;
+  text-shadow: 0px 0px 60.125px var(--color-orange);
   text-transform: uppercase;
   margin-bottom: 0;
 }
@@ -56,20 +75,20 @@
 .cryptocard__divider {
   height: 1px;
   width: 100%;
-  background: #ffffff;
+  background: var(--color-white);
   opacity: 0.15;
 }
 
 .cryptocard__price {
   font-weight: 700;
   font-size: 17.4275px;
-  text-shadow: 0px 0px 60.125px #ffc255;
+  text-shadow: 0px 0px 60.125px var(--color-orange);
   margin-bottom: 0;
 }
 
 .cryptocard__badge {
   height: 15px;
-  background: #fff8d6;
+  background: var(--color-yellow);
   border-radius: 3.48551px;
   text-align: center;
   align-content: center;
@@ -81,23 +100,23 @@
 .cryptocard__badgetext {
   font-weight: 500;
   font-size: 8.5px;
-  color: #000000;
+  color: var(--color-black);
   text-transform: uppercase;
-  text-shadow: 0px 0px 65.8195px #ffc255;
+  text-shadow: 0px 0px 65.8195px var(--color-orange);
 }
 
 .cryptocard__uparrow {
   height: 10px;
   font-size: 8px;
-  color: #b1ffc2;
-  text-shadow: 0px 0px 60.125px #ffc255;
+  color: var(--color-green-light);
+  text-shadow: 0px 0px 60.125px var(--color-orange);
 }
 
 .cryptocard__percentage {
   height: 16px;
   font-size: 12px;
-  color: #b1ffc2;
-  text-shadow: 0px 0px 60.125px #ffc255;
+  color: var(--color-green-light);
+  text-shadow: 0px 0px 60.125px var(--color-orange);
 }
 
 .service__titlecontainer {
@@ -118,7 +137,7 @@
 .service__titledivider {
   width: 70px;
   height: 0px;
-  border: 2px solid #29a643;
+  border: 2px solid var(--color-green);
 }
 
 .service__description {
@@ -133,7 +152,7 @@
 .service_carditem--rest {
   width: 280px;
   height: 235px;
-  background: #0b0819;
+  background: var(--color-blue);
   backdrop-filter: blur(45px);
   border-radius: 10px;
 }
@@ -149,7 +168,7 @@
 .service_carddivider {
   width: 50px;
   height: 0px;
-  border: 2px solid #29a643;
+  border: 2px solid var(--color-green);
 }
 
 .service_carddescription,
@@ -206,7 +225,7 @@
 
 .register__event--cell {
   width: 260px;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid var(--color-white);
 }
 
 .register__event--cell:last-of-type {
@@ -222,7 +241,7 @@
 .register__forminput--text {
   width: 260px;
   height: 40px;
-  background: #f7f7f7;
+  background: var(--color-gray-light);
   border: 1px solid #a9a9a9;
 }
 
@@ -247,7 +266,7 @@ input[type="radio"] + label:before {
 }
 
 input {
-  color: #000000;
+  color: var(--color-black);
   padding: 0 10px;
   font-size: 14px;
 }
@@ -258,28 +277,28 @@ input {
 }
 
 .valid {
-  color: #29a643;
+  color: var(--color-green);
 }
 
 .invalid {
-  color: #d51820;
+  color: var(--color-red);
 }
 
 .register__formbutton {
   width: 260px;
   height: 40px;
-  background: #cccccc;
+  background: var(--color-gray);
   font-weight: 700;
   font-size: 24px;
   text-transform: uppercase;
-  color: #ffffff;
-  font-family: "Bebas Neue", sans-serif !important;
+  color: var(--color-white);
+  font-family: var(--font-family-special) !important;
   letter-spacing: 2px;
   margin: 25px 0;
 }
 
 .success__button {
-  background: #29a643 !important;
+  background: var(--color-green) !important;
 }
 
 .register__formdescription--signup {
@@ -314,7 +333,7 @@ input {
 .bfh__titledivider {
   width: 40px;
   height: 0px;
-  border: 4px solid #d51820;
+  border: 4px solid var(--color-red);
 }
 
 .bfh__title {
@@ -325,23 +344,23 @@ input {
 }
 
 .bfh__title > div {
-  color: #444444;
+  color: var(--color-bfh-fonts);
 }
 
 .bfh__title > div > span {
-  color: #d51820;
+  color: var(--color-red);
 }
 
 .bfh__description {
   width: 279px;
   font-size: 14px;
   line-height: 21px;
-  color: #444444;
+  color: var(--color-bfh-fonts);
   text-align: center;
 }
 
 .bfh__description > strong {
-  color: #444444;
+  color: var(--color-bfh-fonts);
 }
 
 .bfh__card--image {
@@ -352,7 +371,7 @@ input {
 .bfh__card--title {
   font-weight: 700;
   font-size: 20px;
-  color: #444444;
+  color: var(--color-bfh-fonts);
 }
 
 .bfh__card--description {
@@ -360,7 +379,7 @@ input {
   font-size: 14px;
   line-height: 20px;
   text-align: center;
-  color: #444444;
+  color: var(--color-bfh-fonts);
 }
 
 .tpfooter__logo {
@@ -451,7 +470,7 @@ input {
     margin-bottom: 0;
   }
   .register__event--cell {
-    border: 1px solid #ffffff !important;
+    border: 1px solid var(--color-white) !important;
   }
   .register__event--cell:first-child {
     width: 230px;
@@ -652,7 +671,7 @@ input {
   .tpfooter__divider {
     width: 100%;
     height: 1px;
-    background: #444444;
+    background: var(--color-bfh-fonts);
   }
   .sponfooter {
     height: 130px;

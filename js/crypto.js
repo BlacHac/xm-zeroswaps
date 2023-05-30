@@ -34,9 +34,9 @@ function createCryptoCard(crypto) {
       <p class="cryptocard__price">$${crypto.price_usd}</p>
       <span class="d-flex align-items-center gap-1">
         <i class="cryptocard__uparrow fa-sharp fa-solid fa-circle-chevron-up"></i>
-        <small class="cryptocard__percentage">%${
+        <small class="cryptocard__percentage">${
           crypto.percent_change_7d
-        }</small>
+        }%</small>
       </span>
     </div>
   `;
