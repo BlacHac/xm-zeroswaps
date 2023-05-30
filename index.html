@@ -324,7 +324,10 @@
                 </div>
               </div>
             </div>
-            <div class="register__alert p-2 p-md-3 p-xl-4">
+            <div
+              id="successBanner"
+              class="d-none register__alert p-2 p-md-3 p-xl-4"
+            >
               <div class="mb-1 mb-md-2 mb-xl-3">
                 <img
                   class="register__alert--icon"
@@ -346,7 +349,12 @@
                 </span>
               </div>
             </div>
-            <button id="signupButton" class="register__formbutton">
+            <button
+              id="signupButton"
+              type="submit"
+              class="register__formbutton"
+              disabled
+            >
               Register Now
             </button>
             <div class="register__formdescription--signup mx-auto">

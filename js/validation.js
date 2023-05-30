@@ -1,3 +1,43 @@
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+
+const button = document.getElementById("signupButton");
+const successMessage = document.getElementById("successBanner");
+
+const numCharactersLabel = document.getElementById("charactersLabel");
+const numbersLabel = document.getElementById("numbersLabel");
+const numLowercaseLabel = document.getElementById("lowercaseLabel");
+const numUppercaseLabel = document.getElementById("uppercaseLabel");
+const numSpecialCharLabel = document.getElementById("symbolsLabel");
+
+const emailError = document.getElementById("emailerror-warning");
+
+button.addEventListener("click", function (event) {
+  event.preventDefault();
+  successMessage.classList.remove("d-none");
+});
+
+emailInput.addEventListener("input", function () {
+  const emailValue = emailInput.value;
+  const isValidEmail = validateEmail(emailValue);
+
+  if (emailValue && !isValidEmail) {
+    emailError.classList.remove("d-none");
+  } else {
+    emailError.classList.add("d-none");
+  }
+
+  updateButtonState();
+});
+
+passwordInput.addEventListener("input", function () {
+  const passwordValue = passwordInput.value;
+  const passwordValidation = validatePassword(passwordValue);
+
+  updatePasswordLabels(passwordValidation);
+  updateButtonState();
+});
+
 function validateEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
@@ -21,93 +61,27 @@ function validatePassword(password) {
   return validation;
 }
 
-const emailInput = document.getElementById("email");
-const passwordInput = document.getElementById("password");
+function updatePasswordLabels(passwordValidation) {
+  updateLabelState(numCharactersLabel, passwordValidation.length);
+  updateLabelState(numbersLabel, passwordValidation.number);
+  updateLabelState(numLowercaseLabel, passwordValidation.lowercase);
+  updateLabelState(numUppercaseLabel, passwordValidation.uppercase);
+  updateLabelState(numSpecialCharLabel, passwordValidation.special);
+}
 
-const button = document.getElementById("signupButton");
-
-const numCharactersLabel = document.getElementById("charactersLabel");
-const numbersLabel = document.getElementById("numbersLabel");
-const numLowercaseLabel = document.getElementById("lowercaseLabel");
-const numUppercaseLabel = document.getElementById("uppercaseLabel");
-const numSpecialCharLabel = document.getElementById("symbolsLabel");
-
-const emailerror = document.getElementById("emailerror-warning");
-
-emailInput.addEventListener("input", function () {
-  const emailValue = emailInput.value;
-
-  const isValidEmail = validateEmail(emailValue);
-
-  if (emailValue && !isValidEmail) {
-    emailerror.classList.remove("d-none");
+function updateLabelState(label, isValid) {
+  if (!isValid) {
+    label.classList.add("invalid");
+    label.classList.remove("valid");
   } else {
-    emailerror.classList.add("d-none");
+    label.classList.remove("invalid");
+    label.classList.add("valid");
   }
+}
 
-  const passwordValidation = validatePassword(passwordInput.value);
-
-  const isValidPassword =
-    passwordValidation.length &&
-    passwordValidation.number &&
-    passwordValidation.lowercase &&
-    passwordValidation.uppercase &&
-    passwordValidation.special;
-
-  if (isValidEmail && isValidPassword) {
-    button.classList.add("success__button");
-    console.log("SUCCESS");
-  } else {
-    button.classList.remove("success__button");
-  }
-});
-
-passwordInput.addEventListener("input", function () {
-  const passwordValue = passwordInput.value;
-
-  const passwordValidation = validatePassword(passwordValue);
-
-  if (!passwordValidation.length) {
-    numCharactersLabel.classList.remove("valid");
-    numCharactersLabel.classList.add("invalid");
-  } else {
-    numCharactersLabel.classList.remove("invalid");
-    numCharactersLabel.classList.add("valid");
-  }
-
-  if (!passwordValidation.number) {
-    numbersLabel.classList.add("invalid");
-    numbersLabel.classList.remove("valid");
-  } else {
-    numbersLabel.classList.add("valid");
-    numbersLabel.classList.remove("invalid");
-  }
-
-  if (!passwordValidation.lowercase) {
-    numLowercaseLabel.classList.add("invalid");
-    numLowercaseLabel.classList.remove("valid");
-  } else {
-    numLowercaseLabel.classList.remove("invalid");
-    numLowercaseLabel.classList.add("valid");
-  }
-
-  if (!passwordValidation.uppercase) {
-    numUppercaseLabel.classList.add("invalid");
-    numUppercaseLabel.classList.remove("valid");
-  } else {
-    numUppercaseLabel.classList.remove("invalid");
-    numUppercaseLabel.classList.add("valid");
-  }
-
-  if (!passwordValidation.special) {
-    numSpecialCharLabel.classList.add("invalid");
-    numSpecialCharLabel.classList.remove("valid");
-  } else {
-    numSpecialCharLabel.classList.remove("invalid");
-    numSpecialCharLabel.classList.add("valid");
-  }
-
+function updateButtonState() {
   const isValidEmail = validateEmail(emailInput.value);
+  const passwordValidation = validatePassword(passwordInput.value);
   const isValidPassword =
     passwordValidation.length &&
     passwordValidation.number &&
@@ -117,8 +91,10 @@ passwordInput.addEventListener("input", function () {
 
   if (isValidEmail && isValidPassword) {
     button.classList.add("success__button");
+    button.removeAttribute("disabled");
     console.log("SUCCESS");
   } else {
     button.classList.remove("success__button");
+    button.setAttribute("disabled", true);
   }
-});
+}
