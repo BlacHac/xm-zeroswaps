@@ -218,7 +218,7 @@
                   type="email"
                   name="email"
                 />
-                <div class="d-block mt-1">
+                <div id="emailerror-warning" class="d-none mt-1">
                   <input
                     class="register__forminput--radio"
                     type="radio"
@@ -227,7 +227,10 @@
                     checked
                     disabled
                   />
-                  <label class="register__formlabel--radio" for="emailerror">
+                  <label
+                    class="register__formlabel--radio invalid"
+                    for="emailerror"
+                  >
                     Please Enter Valid Email
                   </label>
                 </div>

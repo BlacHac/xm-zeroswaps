@@ -26,27 +26,39 @@ const passwordInput = document.getElementById("password");
 
 const button = document.getElementById("signupButton");
 
-const numCharacters = document.getElementById("characters");
-const numbers = document.getElementById("numbers");
-const numLowercase = document.getElementById("lowercase");
-const numUppercase = document.getElementById("uppercase");
-const numSpecialChar = document.getElementById("symbols");
-
 const numCharactersLabel = document.getElementById("charactersLabel");
 const numbersLabel = document.getElementById("numbersLabel");
 const numLowercaseLabel = document.getElementById("lowercaseLabel");
 const numUppercaseLabel = document.getElementById("uppercaseLabel");
 const numSpecialCharLabel = document.getElementById("symbolsLabel");
 
+const emailerror = document.getElementById("emailerror-warning");
+
 emailInput.addEventListener("input", function () {
   const emailValue = emailInput.value;
 
   const isValidEmail = validateEmail(emailValue);
 
-  if (isValidEmail) {
-    console.log("Email is valid");
+  if (emailValue && !isValidEmail) {
+    emailerror.classList.remove("d-none");
   } else {
-    console.log("Email is invalid");
+    emailerror.classList.add("d-none");
+  }
+
+  const passwordValidation = validatePassword(passwordInput.value);
+
+  const isValidPassword =
+    passwordValidation.length &&
+    passwordValidation.number &&
+    passwordValidation.lowercase &&
+    passwordValidation.uppercase &&
+    passwordValidation.special;
+
+  if (isValidEmail && isValidPassword) {
+    button.classList.add("success__button");
+    console.log("SUCCESS");
+  } else {
+    button.classList.remove("success__button");
   }
 });
 
@@ -56,77 +68,57 @@ passwordInput.addEventListener("input", function () {
   const passwordValidation = validatePassword(passwordValue);
 
   if (!passwordValidation.length) {
-    numCharacters.classList.remove("valid");
     numCharactersLabel.classList.remove("valid");
-    numCharacters.classList.add("invalid");
     numCharactersLabel.classList.add("invalid");
   } else {
-    numCharacters.classList.remove("invalid");
     numCharactersLabel.classList.remove("invalid");
-    numCharacters.classList.add("valid");
     numCharactersLabel.classList.add("valid");
   }
 
   if (!passwordValidation.number) {
-    numbers.classList.add("invalid");
     numbersLabel.classList.add("invalid");
-    numbers.classList.remove("valid");
     numbersLabel.classList.remove("valid");
   } else {
-    numbers.classList.add("valid");
     numbersLabel.classList.add("valid");
-    numbers.classList.remove("invalid");
     numbersLabel.classList.remove("invalid");
   }
 
   if (!passwordValidation.lowercase) {
-    numLowercase.classList.add("invalid");
     numLowercaseLabel.classList.add("invalid");
-    numLowercase.classList.remove("valid");
     numLowercaseLabel.classList.remove("valid");
   } else {
-    numLowercase.classList.remove("invalid");
     numLowercaseLabel.classList.remove("invalid");
-    numLowercase.classList.add("valid");
     numLowercaseLabel.classList.add("valid");
   }
 
   if (!passwordValidation.uppercase) {
-    numUppercase.classList.add("invalid");
     numUppercaseLabel.classList.add("invalid");
-    numUppercase.classList.remove("valid");
     numUppercaseLabel.classList.remove("valid");
   } else {
-    numUppercase.classList.remove("invalid");
     numUppercaseLabel.classList.remove("invalid");
-    numUppercase.classList.add("valid");
     numUppercaseLabel.classList.add("valid");
   }
 
   if (!passwordValidation.special) {
-    numSpecialChar.classList.add("invalid");
     numSpecialCharLabel.classList.add("invalid");
-    numSpecialChar.classList.remove("valid");
     numSpecialCharLabel.classList.remove("valid");
   } else {
-    numSpecialChar.classList.remove("invalid");
     numSpecialCharLabel.classList.remove("invalid");
-    numSpecialChar.classList.add("valid");
     numSpecialCharLabel.classList.add("valid");
   }
+
+  const isValidEmail = validateEmail(emailInput.value);
+  const isValidPassword =
+    passwordValidation.length &&
+    passwordValidation.number &&
+    passwordValidation.lowercase &&
+    passwordValidation.uppercase &&
+    passwordValidation.special;
+
+  if (isValidEmail && isValidPassword) {
+    button.classList.add("success__button");
+    console.log("SUCCESS");
+  } else {
+    button.classList.remove("success__button");
+  }
 });
-
-const isValidEmail = validateEmail(emailInput.value);
-const isValidPassword =
-  passwordValidation.length &&
-  passwordValidation.number &&
-  passwordValidation.lowercase &&
-  passwordValidation.uppercase &&
-  passwordValidation.special;
-
-if (isValidEmail && isValidPassword) {
-  button.classList.add("success__button");
-  console.log("SUCCESS");
-} else {
-  button.classList.remove("success__button");
-}
