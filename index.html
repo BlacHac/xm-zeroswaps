@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
     <title>XM.com</title>
@@ -79,99 +79,9 @@
     <main>
       <!-- crypto cards section-->
       <div
+        id="cryptoContainer"
         class="container-fluid bg-dark d-flex justify-content-center flex-wrap row-gap-4 py-3"
-      >
-        <div class="cryptocard d-flex flex-column justify-content-evenly">
-          <div class="d-flex align-items-center gap-3">
-            <!-- check best practices for image resizing-->
-            <img class="cryptocard__logo" src="assets/btc.png" alt="btc_icon" />
-            <h6 class="cryptocard_title">BTC</h6>
-            <div class="cryptocard__badge">
-              <p class="cryptocard__badgetext mx-auto">Bitcoin</p>
-            </div>
-          </div>
-          <div class="cryptocard__divider"></div>
-          <p class="cryptocard__price">$87,193.00</p>
-          <span class="d-flex align-items-center gap-1">
-            <i
-              class="cryptocard__uparrow fa-sharp fa-solid fa-circle-chevron-up"
-            ></i>
-            <small class="cryptocard__percentage">12.95%</small>
-          </span>
-        </div>
-        <div class="cryptocard d-flex flex-column justify-content-evenly">
-          <div class="d-flex align-items-center gap-3">
-            <!-- check best practices for image resizing-->
-            <img class="cryptocard__logo" src="assets/eth.png" alt="btc_icon" />
-            <h6 class="cryptocard_title">ETH</h6>
-            <div class="cryptocard__badge">
-              <p class="cryptocard__badgetext mx-auto">Bitcoin</p>
-            </div>
-          </div>
-          <div class="cryptocard__divider"></div>
-          <p class="cryptocard__price">$1,276.00</p>
-          <span class="d-flex align-items-center gap-1">
-            <i
-              class="cryptocard__uparrow fa-sharp fa-solid fa-circle-chevron-up"
-            ></i>
-            <small class="cryptocard__percentage">4.87%</small>
-          </span>
-        </div>
-        <div class="cryptocard d-flex flex-column justify-content-evenly">
-          <div class="d-flex align-items-center gap-3">
-            <!-- check best practices for image resizing-->
-            <img class="cryptocard__logo" src="assets/xrp.png" alt="btc_icon" />
-            <h6 class="cryptocard_title">xrp</h6>
-            <div class="cryptocard__badge">
-              <p class="cryptocard__badgetext mx-auto">Bitcoin</p>
-            </div>
-          </div>
-          <div class="cryptocard__divider"></div>
-          <p class="cryptocard__price">$0,6058.00</p>
-          <span class="d-flex align-items-center gap-1">
-            <i
-              class="cryptocard__uparrow fa-sharp fa-solid fa-circle-chevron-up"
-            ></i>
-            <small class="cryptocard__percentage">4.59%</small>
-          </span>
-        </div>
-        <div class="cryptocard d-flex flex-column justify-content-evenly">
-          <div class="d-flex align-items-center gap-3">
-            <!-- check best practices for image resizing-->
-            <img class="cryptocard__logo" src="assets/bch.png" alt="bch_icon" />
-            <h6 class="cryptocard_title">bch</h6>
-            <div class="cryptocard__badge">
-              <p class="cryptocard__badgetext mx-auto">Bitcoin</p>
-            </div>
-          </div>
-          <div class="cryptocard__divider"></div>
-          <p class="cryptocard__price">$1,276.00</p>
-          <span class="d-flex align-items-center gap-1">
-            <i
-              class="cryptocard__uparrow fa-sharp fa-solid fa-circle-chevron-up"
-            ></i>
-            <small class="cryptocard__percentage">5.87%</small>
-          </span>
-        </div>
-        <div class="cryptocard d-flex flex-column justify-content-evenly">
-          <div class="d-flex align-items-center gap-3">
-            <!-- check best practices for image resizing-->
-            <img class="cryptocard__logo" src="assets/ltc.png" alt="ltc_icon" />
-            <h6 class="cryptocard_title">BTC</h6>
-            <div class="cryptocard__badge">
-              <p class="cryptocard__badgetext mx-auto">Bitcoin</p>
-            </div>
-          </div>
-          <div class="cryptocard__divider"></div>
-          <p class="cryptocard__price">$107,83.00</p>
-          <span class="d-flex align-items-center gap-1">
-            <i
-              class="cryptocard__uparrow fa-sharp fa-solid fa-circle-chevron-up"
-            ></i>
-            <small class="cryptocard__percentage">8.23%</small>
-          </span>
-        </div>
-      </div>
+      ></div>
       <!-- Why Trade with XM? section -->
       <div class="service container-fluid bg-dark py-3">
         <div class="d-flex flex-column align-items-center gap-4 mb-5">
@@ -312,12 +222,12 @@
                   <input
                     class="register__forminput--radio"
                     type="radio"
-                    name="characters"
-                    id="characters"
+                    name="emailerror"
+                    id="emailerror"
                     checked
                     disabled
                   />
-                  <label class="register__formlabel--radio" for="characters">
+                  <label class="register__formlabel--radio" for="emailerror">
                     Please Enter Valid Email
                   </label>
                 </div>
@@ -434,7 +344,78 @@
         </div>
       </div>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="bfh d-xl-flex pt-4 justify-content-xl-center">
+        <div
+          class="bfh__titlecontainer d-flex flex-column align-items-center align-items-xl-start gap-2 ps-xl-5 mb-4"
+        >
+          <div class="bfh__titledivider mb-md-3"></div>
+          <div class="bfh__title d-flex flex-xl-column">
+            <div class="pe-2 pe-xl-0">Big<span>.</span></div>
+            <div class="pe-2 pe-xl-0">Fair<span>.</span></div>
+            <div class="pe-2 pe-xl-0">Human<span>.</span></div>
+          </div>
+          <p class="bfh__description">
+            Learn why <strong>over 5 million clients choose XM</strong> as their
+            trusted online broker.
+          </p>
+        </div>
+        <div class="container-fluid row d-md-flex justify-content-md-end">
+          <div
+            class="bfh__card d-flex col-md-5 col-9 mx-auto flex-column align-items-center align-items-md-start gap-3 py-3"
+          >
+            <img class="bfh__card--image" src="assets/authorised.png" />
+            <h5 class="bfh__card--title">Authorised and Regulated</h5>
+            <p class="bfh__card--description">
+              At XM, we adhere to all regulatory standards and are fully
+              authorised and regulated by FSC.
+            </p>
+          </div>
+          <div
+            class="bfh__card d-flex col-md-5 col-9 mx-auto flex-column align-items-center align-items-md-start gap-3 py-3"
+          >
+            <img class="bfh__card--image" src="assets/commited.png" />
+            <h5 class="bfh__card--title">Committed and Fair</h5>
+            <p class="bfh__card--description">
+              We operate with complete transparency and adhere to the highest
+              professional and ethical standards.
+            </p>
+          </div>
+          <div
+            class="bfh__card d-flex col-md-5 col-9 mx-auto flex-column align-items-center align-items-md-start gap-3 py-3"
+          >
+            <img class="bfh__card--image" src="assets/award.png" />
+            <h5 class="bfh__card--title">Multi-Award-Winning</h5>
+            <p class="bfh__card--description">
+              Over the years we have received over 40 awards for the quality of
+              our products and services.
+            </p>
+          </div>
+          <div
+            class="bfh__card d-flex col-md-5 col-9 mx-auto flex-column align-items-center align-items-md-start gap-3 py-3"
+          >
+            <img class="bfh__card--image" src="assets/support.png" />
+            <h5 class="bfh__card--title">24/7 Support</h5>
+            <p class="bfh__card--description">
+              Our support agents are on hand 24/7 to answer your questions or
+              assist you with any issues.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="tpfooter bg-black d-flex flex-md-row justify-content-md-between px-md-4 flex-column align-items-center justify-content-center"
+      >
+        <div class="mb-4 mb-md-0">
+          <a class="tpfooter__links" href="#">Privacy Policy</a>
+          <span class="tpfooter__links--divider">|</span>
+          <a class="tpfooter__links" href="#">Cookie Policy</a>
+          <span class="tpfooter__links--divider">|</span>
+          <a class="tpfooter__links" href="#">Terms and Conditions</a>
+        </div>
+        <img class="tpfooter__logo" src="assets/tradingpoint-logo.png" />
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
@@ -444,5 +425,6 @@
       src="https://kit.fontawesome.com/589076b4f6.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
   </body>
 </html>
