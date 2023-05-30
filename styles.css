@@ -625,6 +625,36 @@ input {
     line-height: 20px;
   }
   .tpfooter {
-    height: 257px;
+    height: 130px;
+  }
+  .sponfooter__sponimg:first-child {
+    width: 136px;
+    height: 25.03px;
+  }
+  .sponfooter__sponimg:nth-child(2) {
+    width: 131px;
+    height: 36.58px;
+  }
+  .sponfooter__sponimg:nth-child(3) {
+    width: 110px;
+    height: 38.5px;
+  }
+  .sponfooter__sponimg:nth-child(4) {
+    width: 195px;
+    height: 37.54px;
+  }
+  .sponfooter__followus {
+    width: 68px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #888888;
+  }
+  .tpfooter__divider {
+    width: 100%;
+    height: 1px;
+    background: #444444;
+  }
+  .sponfooter {
+    height: 130px;
   }
 }
