@@ -246,9 +246,23 @@ input[type="radio"] + label:before {
   background-color: #959595;
 }
 
+input {
+  color: #000000;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
 .register__formlabel--radio {
   font-size: 10px;
   color: #959595;
+}
+
+.valid {
+  color: #29a643;
+}
+
+.invalid {
+  color: #d51820;
 }
 
 .register__formbutton {
@@ -262,6 +276,10 @@ input[type="radio"] + label:before {
   font-family: "Bebas Neue", sans-serif !important;
   letter-spacing: 2px;
   margin: 25px 0;
+}
+
+.success__button {
+  background: #29a643 !important;
 }
 
 .register__formdescription--signup {
@@ -608,5 +626,8 @@ input[type="radio"] + label:before {
   }
   .tpfooter {
     height: 257px;
+  }
+  .bfh__titlecontainer {
+    width: 30%;
   }
 }

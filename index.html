@@ -251,7 +251,11 @@
                     checked
                     disabled
                   />
-                  <label class="register__formlabel--radio" for="characters">
+                  <label
+                    id="charactersLabel"
+                    class="register__formlabel--radio"
+                    for="characters"
+                  >
                     8 - 15 characters </label
                   ><br />
                   <input
@@ -262,7 +266,11 @@
                     checked
                     disabled
                   />
-                  <label class="register__formlabel--radio" for="numbers">
+                  <label
+                    id="numbersLabel"
+                    class="register__formlabel--radio"
+                    for="numbers"
+                  >
                     1 or more numbers </label
                   ><br />
                   <input
@@ -273,7 +281,11 @@
                     checked
                     disabled
                   />
-                  <label class="register__formlabel--radio" for="lowercase">
+                  <label
+                    id="lowercaseLabel"
+                    class="register__formlabel--radio"
+                    for="lowercase"
+                  >
                     1 or more lower case letters </label
                   ><br />
                   <input
@@ -284,7 +296,11 @@
                     checked
                     disabled
                   />
-                  <label class="register__formlabel--radio" for="uppercase">
+                  <label
+                    id="uppercaseLabel"
+                    class="register__formlabel--radio"
+                    for="uppercase"
+                  >
                     1 or more upper case letters </label
                   ><br />
                   <input
@@ -295,7 +311,11 @@
                     checked
                     disabled
                   />
-                  <label class="register__formlabel--radio" for="symbols">
+                  <label
+                    id="symbolsLabel"
+                    class="register__formlabel--radio"
+                    for="symbols"
+                  >
                     1 or more special characters (#[]()@$&*!?|,.^/\+_-)
                   </label>
                 </div>
@@ -323,7 +343,9 @@
                 </span>
               </div>
             </div>
-            <button class="register__formbutton">Register Now</button>
+            <button id="signupButton" class="register__formbutton">
+              Register Now
+            </button>
             <div class="register__formdescription--signup mx-auto">
               <p>
                 Don’t have an account?
@@ -360,7 +382,7 @@
             trusted online broker.
           </p>
         </div>
-        <div class="container-fluid row d-md-flex justify-content-md-end">
+        <div class="row d-md-flex justify-content-md-end">
           <div
             class="bfh__card d-flex col-md-5 col-9 mx-auto flex-column align-items-center align-items-md-start gap-3 py-3"
           >
@@ -425,6 +447,7 @@
       src="https://kit.fontawesome.com/589076b4f6.js"
       crossorigin="anonymous"
     ></script>
-    <script src="index.js"></script>
+    <script src="js/crypto.js"></script>
+    <script src="js/validation.js"></script>
   </body>
 </html>
