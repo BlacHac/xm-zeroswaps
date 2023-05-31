@@ -77,11 +77,11 @@
       </div>
     </header>
     <main>
-      <!-- crypto cards section-->
+      <!-- crypto cards section
       <div
         id="cryptoContainer"
         class="container-fluid bg-dark d-flex justify-content-center flex-wrap row-gap-4 py-3"
-      ></div>
+      ></div>-->
       <!-- Why Trade with XM? section -->
       <div class="service container-fluid bg-dark pt-5 pb-3">
         <div class="d-flex flex-column align-items-center gap-4 mb-5">
@@ -378,7 +378,31 @@
       </div>
     </main>
     <footer>
-      <div class="bfh d-xl-flex pt-4 justify-content-xl-center">
+      <div class="gallery py-5">
+        <h4 class="gallery__title mb-3">Event Gallery</h4>
+        <div class="d-flex justify-content-center align-items-center">
+          <button id="prev-button" class="gallery__carousel-button">
+            <i class="fa-solid fa-chevron-left" style="color: #959595"></i>
+          </button>
+          <div class="gallery__carousel-container mx-3">
+            <div id="carousel-wrapper" class="gallery__carousel-wrapper">
+              <div id="carousel" class="gallery__carousel-items">
+                <img src="assets/unnamed.jpg" alt="Image 1" />
+                <img src="assets/unnamed.jpg" alt="Image 2" />
+                <img src="assets/unnamed.jpg" alt="Image 2" />
+                <img src="assets/unnamed.jpg" alt="Image 2" />
+                <img src="assets/unnamed.jpg" alt="Image 2" />
+                <img src="assets/unnamed.jpg" alt="Image 2" />
+                <img src="assets/unnamed.jpg" alt="Image 2" />
+              </div>
+            </div>
+          </div>
+          <button id="next-button" class="gallery__carousel-button">
+            <i class="fa-solid fa-chevron-right" style="color: #959595"></i>
+          </button>
+        </div>
+      </div>
+      <div class="bfh d-xl-flex pt-5 justify-content-xl-center">
         <div
           class="bfh__titlecontainer d-flex flex-column align-items-center align-items-xl-start gap-2 ps-xl-5 mb-4"
         >
@@ -393,9 +417,11 @@
             trusted online broker.
           </p>
         </div>
-        <div class="row d-md-flex flex-md-row justify-content-md-end">
+        <div
+          class="container-fluid row d-md-flex flex-md-row justify-content-md-end"
+        >
           <div
-            class="bfh__card d-flex p-md-0 m-md-0 col-md-5 col-9 mx-auto flex-column align-items-center align-items-md-start gap-3 py-3"
+            class="bfh__card d-flex p-md-0 mx-0 px-0 m-md-0 col-md-5 col-11 mx-auto flex-column align-items-center align-items-md-start gap-3 py-3"
           >
             <img class="bfh__card--image" src="assets/authorised.png" />
             <h5 class="bfh__card--title">Authorised and Regulated</h5>
@@ -491,5 +517,6 @@
     ></script>
     <script src="js/crypto.js"></script>
     <script src="js/validation.js"></script>
+    <script src="js/carousel.js"></script>
   </body>
 </html>

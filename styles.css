@@ -6,6 +6,7 @@
   --color-green: #29a643;
   --color-gray-light: #f7f7f7;
   --color-gray: #cccccc;
+  --color-dark-gray: #959595;
   --color-black: #000000;
   --color-red: #d51820;
   --color-orange: #ffc255;
@@ -262,7 +263,7 @@ input[type="radio"] + label:before {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background-color: #959595;
+  background-color: var(--color-dark-gray);
 }
 
 input {
@@ -273,7 +274,7 @@ input {
 
 .register__formlabel--radio {
   font-size: 10px;
-  color: #959595;
+  color: var(--color-dark-gray);
 }
 
 .valid {
@@ -402,6 +403,47 @@ input {
   height: 225px;
 }
 
+.gallery {
+  background: #f4f4f4;
+}
+
+.gallery__title {
+  font-weight: 800;
+  font-size: 30px;
+  color: #252525;
+  text-align: center;
+}
+
+.gallery__carousel-container {
+  width: 200px;
+  overflow: hidden;
+}
+
+.gallery__carousel-wrapper {
+  display: flex;
+  width: fit-content;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gallery__carousel-items {
+  display: flex;
+}
+
+.gallery__carousel-items img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.gallery__carousel-button {
+  width: 17px;
+  height: 32px;
+  font-size: 30px;
+  color: var(--color-dark-gray);
+  border: none;
+  background-color: transparent;
+}
+
 @media (min-width: 768px) {
   .hero__title {
     width: 600px;
@@ -524,6 +566,14 @@ input {
   }
   .tpfooter {
     height: 150px;
+  }
+  .gallery__carousel-container {
+    width: 520px;
+  }
+
+  .gallery__carousel-items img {
+    width: 130px;
+    height: 130px;
   }
 }
 
@@ -675,5 +725,13 @@ input {
   }
   .sponfooter {
     height: 130px;
+  }
+  .gallery__carousel-container {
+    width: 820px;
+  }
+
+  .gallery__carousel-items img {
+    width: 164px;
+    height: 164px;
   }
 }
