@@ -5,6 +5,7 @@
   --color-white: #ffffff;
   --color-green: #29a643;
   --color-gray-light: #f7f7f7;
+  --color-gray-light2: #dddddd;
   --color-gray: #cccccc;
   --color-dark-gray: #959595;
   --color-black: #000000;
@@ -26,12 +27,23 @@
   color: var(--color-white);
 }
 
+body {
+  height: 100vh;
+  background-color: #201d27 !important;
+}
+
 .signup__button {
   font-size: 24px !important;
   width: 290px;
   letter-spacing: 1px;
   font-family: var(--font-family-special) !important;
   background-color: var(--color-green) !important;
+}
+
+.hero__title-prefix {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-gray-light2);
 }
 
 .hero__title {
